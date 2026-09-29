@@ -77,6 +77,46 @@ function App() {
       </Button>
       </Container>
     </Box>
+
+    <Box component="section" id="usluge" sx={{ px: 8}}>
+      <Container>
+        <Typography variant="h2" component="h3" textAlign="center" gutterBottom>
+          Naše usuluge
+        </Typography>
+
+        <Box
+          sx={{
+            display: "grid",
+            gridTemplateColumns: { xs: "1fr", md: "repeat(3, 1fr)"},
+            gap: 4,
+            mt: 5,
+          }}
+          >
+            {services.map((service) => (
+              <Card key={service.title}>
+                <CardMedia
+                  component="img"
+                  height="100"
+                  image={service.image}
+                  alt={service.title}
+                />
+
+              <CardContent>
+                <Typography variant="h5" component="h3" gutterBottom>
+                  {service.title}
+                </Typography>
+
+                <Typography color="text.secondary">
+                  {service.text}
+                </Typography>
+              </CardContent>
+
+              </Card>
+            ))}
+          </Box>
+
+      </Container>
+    </Box>
     </>
   )
 }
