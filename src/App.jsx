@@ -9,7 +9,7 @@ import {
   TextField,
   Toolbar,
   Typography,
-} from "@mui/material"
+} from "@mui/material";
 
 const services = [
   {
@@ -20,7 +20,7 @@ const services = [
   {
     title: "Nadogradnja računala",
     image: "/images/upgrade.jpg",
-    text:"Ugradnja RAM-a, SSD-a i drugih komonenti za bolje performanse.",
+    text:"Ugradnja RAM-a, SSD-a i drugih komponenti za bolje performanse.",
   },
   {
     title: "Računalna sigurnost",
@@ -34,7 +34,7 @@ function App() {
     <>
     <AppBar component="header" position="static">
       <Toolbar sx={{ justifyContent: "space-between", flexWrap: "wrap"}}>
-        <Typography variant = "h6" component="a" href="#pocetna"
+        <Typography variant="h6" component="a" href="#pocetna"
         sx={{color: "inherit", textDecoration: "none", fontWeight: "bold"}}>
           ComputerFix
         </Typography>
@@ -49,7 +49,7 @@ function App() {
     </AppBar>
 
     <Box
-    compomemt="main"
+    component="main"
     id="pocetna"
     sx={{
       textAlign: "center",
@@ -68,7 +68,7 @@ function App() {
         Vaše računalo. Naša briga.
       </Typography>
 
-      <Typography variant="h6# sx={{ mt: 2}}">
+      <Typography variant="h6" sx={{ mt: 2}}>
         Brz, pouzdan i profesionalan servis računala.
       </Typography>
 
@@ -78,10 +78,10 @@ function App() {
       </Container>
     </Box>
 
-    <Box component="section" id="usluge" sx={{ px: 8}}>
+    <Box component="section" id="usluge" sx={{ py: 8}}>
       <Container>
         <Typography variant="h2" component="h2" textAlign="center" gutterBottom>
-          Naše usuluge
+          Naše usluge
         </Typography>
 
         <Box
@@ -141,7 +141,7 @@ function App() {
           </Typography>
 
           <Box
-            component="from"
+            component="form"
             sx={{ display: "grid", gap: 2, mt: 4}}
             onSubmit={(event) => event.preventDefault()}
             >
@@ -154,8 +154,18 @@ function App() {
             </Box>
         </Container>
       </Box>
+
+      <Box component="footer" sx={{ py: 4, px: 2, bgcolor: "grey.900", color: "white"}}>
+        <Container>
+          <Typography variant="h6">ComputerFix</Typography>
+          <Typography variant="body2">Autor: Matija Marinović</Typography>
+          <Typography variant="body2">Razred. 4.E</Typography>
+          <Typography variant="body2">Školska godina: 2026./2027.</Typography>
+          <Typography variant="body2">E-mail: computerfix@example.com</Typography>
+        </Container>
+      </Box>
     </>
-  )
+  );
 }
 
 export default App;
