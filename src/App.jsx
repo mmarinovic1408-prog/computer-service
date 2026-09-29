@@ -14,17 +14,17 @@ import {
 const services = [
   {
     title: "Popravak računala",
-    image: "/images/repair.jpg",
+    image: `${import.meta.env.BASE_URL}images/repair.jpg`,
     text:"Dijagnostika i popravak hardverskih i softverskih problema.",
   },
   {
     title: "Nadogradnja računala",
-    image: "/images/upgrade.jpg",
+    image: `${import.meta.env.BASE_URL}images/upgrade.jpg`,
     text:"Ugradnja RAM-a, SSD-a i drugih komponenti za bolje performanse.",
   },
   {
     title: "Računalna sigurnost",
-    image: "/images/security.jpg",
+    image: `${import.meta.env.BASE_URL}images/security.jpg`,
     text:"Zaštita računala od virusa, zlonamjernog softvera i drugih prijetnji.",
   },
 ];
