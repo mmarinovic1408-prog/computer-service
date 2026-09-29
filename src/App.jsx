@@ -47,6 +47,36 @@ function App() {
         </Box>
       </Toolbar>
     </AppBar>
+
+    <Box
+    compomemt="main"
+    id="pocetna"
+    sx={{
+      textAlign: "center",
+      py: { xs: 8, md: 12 },
+      px: 2,
+      bgcolor: "primary.main",
+      color: "white",
+    }}
+    >
+     <Container maxWidth="md">
+      <Typography
+      variant="h1"
+      component="h1"
+      sx={{ fontSize: { xs: "2.5rem", md: "4rem" }, fontWeight: "bold"}}
+      >
+        Vaše računalo. Naša briga.
+      </Typography>
+
+      <Typography variant="h6# sx={{ mt: 2}}">
+        Brz, pouzdan i profesionalan servis računala.
+      </Typography>
+
+      <Button variant="contained" color="secondary" href="#usluge" sx={{ mt:4}}>
+        Pogledajte usluge
+      </Button>
+      </Container>
+    </Box>
     </>
   )
 }
