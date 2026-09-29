@@ -80,7 +80,7 @@ function App() {
 
     <Box component="section" id="usluge" sx={{ px: 8}}>
       <Container>
-        <Typography variant="h2" component="h3" textAlign="center" gutterBottom>
+        <Typography variant="h2" component="h2" textAlign="center" gutterBottom>
           Naše usuluge
         </Typography>
 
@@ -88,15 +88,15 @@ function App() {
           sx={{
             display: "grid",
             gridTemplateColumns: { xs: "1fr", md: "repeat(3, 1fr)"},
-            gap: 4,
-            mt: 5,
+            gap: 3,
+            mt: 4,
           }}
           >
             {services.map((service) => (
               <Card key={service.title}>
                 <CardMedia
                   component="img"
-                  height="100"
+                  height="200"
                   image={service.image}
                   alt={service.title}
                 />
@@ -114,9 +114,46 @@ function App() {
               </Card>
             ))}
           </Box>
-
       </Container>
     </Box>
+
+    <Box
+      component="section"
+      id="o-nama"
+      sx={{ py: 8, bgcolor: "grey.100", textAlign: "center" }}
+      >
+        <Container maxWidth="md">
+          <Typography variant="h2" component="h2">
+            O nama
+          </Typography>
+
+          <Typography color="text.secondary" sx={{ mt: 2 }}>
+            ComputerFix je izmišljeni servis računala koji korisnicima
+             pruža pomoć pri popravku, nadogradnju i zaštiti računala.
+          </Typography>
+        </Container>
+      </Box>
+
+      <Box component="section" id="kontakt" sx={{ py: 8 }}>
+        <Container maxWidth="sm">
+          <Typography variant="h2" component="h2" textAlign="center">
+            Kontakt
+          </Typography>
+
+          <Box
+            component="from"
+            sx={{ display: "grid", gap: 2, mt: 4}}
+            onSubmit={(event) => event.preventDefault()}
+            >
+              <TextField label="Ime i prezime" required />
+              <TextField label="E-mail" type="email" required />
+              <TextField label="Poruka" multiline rows={4} required />
+              <Button type="submit" variant="contained">
+                Pošalji upit
+              </Button>
+            </Box>
+        </Container>
+      </Box>
     </>
   )
 }
